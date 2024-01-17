@@ -11,6 +11,10 @@
             <Setter Property="FontSize" Value="15" />
             <Setter Property="FontWeight" Value="ExtraBold" />
         </Style>
+        <Style x:Key="Alert" TargetType="Label">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Foreground" Value="Red" />
+        </Style>
     </Window.Resources>    
     <Grid Height="200" Width="300">
         <Grid.RowDefinitions>
@@ -25,7 +29,7 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="Sign up to become a member." />
+        <Label Style="{StaticResource Alert}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="Sign up to become a member." />
         <Label Grid.Row="1" Grid.Column="0" Content="Name" />
         <TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
         <Label Grid.Row="2" Grid.Column="0" Content="Email" />
